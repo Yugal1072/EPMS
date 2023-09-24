@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} Contact {% endblock %} 
+{% load static %}
+{% block start %}
+
+
+<style>
+    
+.img-fluid{
+    border-radius: 50%;
+    width: 156px;
+    align-self: center;
+    transition: transform 0.3s;
+}
+.img-fluid:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.s-img{
+    align-self: center;
+    width: 100px;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+
+}
+.s-img:hover{
+    transform: scale(1.2);
+}
+ul{
+    padding: 15px;
+    list-style-type: none;
+}
+</style>
+<div class="container ">
+    <ul class="social">
+        <a href="https://www.linkedin.com/in/yugalgovind/" target="_blank"> <img src="{% static '/images/social/Linkedin.jpg' %}" alt="Linkedin" class="s-img"></a>
+        <a href="mailto:yugalgovind1072@gmail.com" target="_blank">         <img src="{% static '/images/social/gmail.jpg' %}" alt="" class="s-img"></a>
+        <a href="https://github.com/Yugal1072" target="_blank">             <img src="{% static '/images/social/githubb.jpg' %}" alt="" class="s-img"></a>
+        <a href="https://www.instagram.com/yugal_govind/" target="_blank">  <img src="{% static '/images/social/insta.jpg' %}" alt="" class="s-img"></a>
+        <a href="https://twitter.com/yugal_govind" target="_blank">         <img src="{% static '/images/social/X.jpg' %}" alt="" class="s-img"></a>
+    </ul>
+</div>
+
+
+
+{% endblock %}

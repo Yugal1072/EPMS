@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block title %} Blog {% endblock %} 
+{% load static %}
+{% block start %}
+
+<div class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-4">
+            <img src="{% static '/images/empimg.png' %}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes"
+                width="700" height="500" loading="lazy">
+        </div>
+        <div class="col-lg-8 ">
+            <h1 class="display-5 fw-bold lh-1 mb-3 ">What is an Employee Management System?</h1>
+            <hr>
+            <p class="lead text-light bg-dark" style="text-align: justify;">First off, let’s try to understand what
+                employee management means.
+
+                Essentially, employee management refers to all the activities that are focused on the employees to
+                ensure that they are able to perform efficiently and achieve their organization’s goals.
+
+                It usually includes everything from recruitment of employees to onboarding them and ensuring that they
+                perform their best. This helps strengthen the overall efficiency of the workplace.
+
+                With that definition of employee management in mind, we can say that an employee management system is
+                software that allows you to store and manage all important work-related details of the employees of your
+                company.
+
+                It keeps track of employee information such as salary details, leave records, medical information,
+                performance reviews, and more. It’s designed to simplify administrative tasks and improve the smooth
+                functioning of the organization.
+
+                Now that you what employee management systems are, let’s try and understand why you need one for your
+                organization.
+                </p>
+                <h5 class="display-5 lh-1 mb-3 ">Why Do You Need an Employee Management System?</h5>
+                <hr>
+                <p class="lead text-light bg-dark" style="text-align: justify;">
+                Studies show that around 53% of HR professionals feel that a smooth onboarding experience positively affects
+                employee engagement.
+
+                And it turns out employee engagement can bring in 2.5 times more revenue in comparison to unengaged
+                employees.
+
+                This is probably why 78% of businesses prioritize employee wellbeing in their business plan, which goes on
+                to show how important employee management is and further proves the need for employee management systems.
+
+                To help you understand better, let’s take a look at some of the benefits of having an employee management
+                system for your business:
+                </p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <!--  <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Primary</button> -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

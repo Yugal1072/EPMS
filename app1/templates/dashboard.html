@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<title>{% block title %} Dashboard {% endblock %} </title>
+
+
+{% block start %}
+
+
+    {% if messages %}
+    <div class="alert alert-success  alert-dismissible fade show" role="alert">
+        {% for message in messages %}
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        {% endfor %}
+    </div>
+    {% endif %}
+   
+
+<div class="col-sm-12 mt-2">
+    <h4 style="text-align: center; background-color: rgb(26, 119, 122); color: white; padding: 10px;">Dashboard
+    </h4>
+    <div class="table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Sr.No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Skills</th>
+                    <th scope="col">Marital Status</th>
+                    <th scope="col">Department Allocated</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            {% for emp in employee %}
+            <tbody>
+                <tr>
+                    <th scope="row">{{forloop.counter}}</th>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.email}}</td>
+                    <td>{{emp.contact}}</td>
+                    <td>{{emp.address}}</td>
+                    <td>{{emp.skills | truncatewords:4}}</td>
+                    <td>{{emp.marital_status}}</td>
+                    <td>{{emp.department}}</td>
+                    <td>{{emp.position}}</td>
+                    <td>
+
+                        <!-- <a href="{% url 'update' emp.id %}" class="btn btn-warning me-2">Update</a>
+                        <a href=""><i class='fas fa-edit' style='font-size:48px;color:red'></i></a> -->
+                        <a href="{% url 'update' emp.id %}"><i class="fa fa-edit" style="font-size:24px;color:orange"></i></a>
+                    </td>
+                    <td>
+                        <!-- <a href="/delete/{{emp.id}}" ><span class="glyphicon glyphicon-trash"></span></a> -->
+                        <a href="/delete/{{emp.id}}"><i class="material-icons" style="font-size:24px;color:red">delete</i></a>
+                    </td>
+                </tr>
+
+            </tbody>
+            {% endfor %}
+        </table>
+        <hr>
+    </div>
+
+</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock %}
