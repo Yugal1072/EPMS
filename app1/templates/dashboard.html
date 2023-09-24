@@ -44,7 +44,7 @@
                     <td>{{emp.email}}</td>
                     <td>{{emp.contact}}</td>
                     <td>{{emp.address}}</td>
-                    <td>{{emp.skills | truncatewords:4}}</td>
+                    <td>{{emp.skills |wordwrap:3|linebreaksbr}}</td>    
                     <td>{{emp.marital_status}}</td>
                     <td>{{emp.department}}</td>
                     <td>{{emp.position}}</td>

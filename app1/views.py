@@ -124,6 +124,8 @@ def registration(request):
     return render (request, 'registration.html', {'forms':forms} ) 
 
 
+
+@login_required(login_url='/login_page')
 def dashboard(request):
     forms = EmployeeForm()
     employee = Employees.objects.all()
