@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} Login {% endblock %} 
+{% block title %} login_page {% endblock %} 
 {% load static %}
 {% block start %}
 
@@ -37,7 +37,7 @@
                 <p>Don't have an Acount ? <a href="{% url 'signup_page' %}" style="color: red;">Signup here</a></p>
                 <p>Forget Password ? <a href="{% url 'reset_password' %}" style="color: red;">Reset Password?</a></p>
                 
-                <button type="submit" class="btn btn-success">Login</button>
+                <button type="submit" class="btn btn-success">login</button>
             </form>
         </div>
 
